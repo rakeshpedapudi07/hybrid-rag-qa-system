@@ -177,27 +177,21 @@ Example request:
 ### 🎯 Key Highlights
 
 - Designed for scalable document ingestion (tested on 10K+ documents)
-
 - Modular retriever architecture
-
 - Evaluation metrics included
-
 - Hybrid search implementation
-
 - Clean project structure for production scaling
 
 ### 📌 Future Improvements
 
 - Cross-Encoder Re-Ranking for improved top-1 precision
-
 - Query Expansion Techniques for semantic coverage improvement
-
 - LLM Fine-Tuning for domain-specific optimization
-
 - Interactive UI (Streamlit / React Frontend)
-
 - Dockerized Deployment & Cloud Hosting
+
 ### 📄 License
 
 This project is licensed under the **MIT License**.
+
 
