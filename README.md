@@ -20,17 +20,48 @@ The system supports:
 ---
 
 ## 🏗 Architecture
-
-User Query  
-↓  
-Hybrid Retriever (Dense + BM25)  
-↓  
-Top-K Retrieved Chunks  
-↓  
-Generator (RAG)  
-↓  
-Final Answer + Sources  
-
+```
+┌────────────────────────────────────────────┐
+│                Client Request              │
+│        (HTTP / REST API via FastAPI)       │
+└────────────────────────────────────────────┘
+                      │
+                      ▼
+┌────────────────────────────────────────────┐
+│             API Layer (FastAPI)            │
+│  • Request Validation (Pydantic)           │
+│  • Routing & Endpoint Handling             │
+└────────────────────────────────────────────┘
+                      │
+                      ▼
+┌────────────────────────────────────────────┐
+│           Hybrid Retrieval Layer           │
+│  • Dense Search (Sentence Transformers)    │
+│  • Sparse Search (BM25)                    │
+│  • Score Fusion & Ranking                  │
+└────────────────────────────────────────────┘
+                      │
+                      ▼
+┌────────────────────────────────────────────┐
+│        Top-K Retrieved Context Chunks      │
+│        (Semantic + Lexical Relevance)      │
+└────────────────────────────────────────────┘
+                      │
+                      ▼
+┌────────────────────────────────────────────┐
+│          Generation Layer (RAG)            │
+│  • Context Injection                       │
+│  • Prompt Construction                     │
+│  • Answer Synthesis                        │
+└────────────────────────────────────────────┘
+                      │
+                      ▼
+┌────────────────────────────────────────────┐
+│            Final Response Payload          │
+│  • Generated Answer                        │
+│  • Source Documents                        │
+└────────────────────────────────────────────┘
+```
 ---
 
 ## 📊 Retrieval Performance (Precision@1)
@@ -105,69 +136,68 @@ hybrid-rag-qa-system/
 git clone https://github.com/rakeshpedapudi07/hybrid-rag-qa-system.git
 cd hybrid-rag-qa-system
 ```
-2️⃣ Create virtual environment
+### 2️⃣ Create virtual environment
 ```
 python -m venv venv
 venv\Scripts\activate
 ```
-3️⃣ Install dependencies
+### 3️⃣ Install dependencies
 ```
 pip install -r requirements.txt
 ```
-📥 Generate Corpus (Optional Large Scale Test)
+### 📥 Generate Corpus (Optional Large Scale Test)
 ```
 python scripts/generate_corpus.py
 ```
-📌 Run Ingestion
+### 📌 Run Ingestion
 ```
 python -m scripts.ingest
 ```
-📈 Evaluate Retrieval
+### 📈 Evaluate Retrieval
 ```
 python -m evaluation.evaluate_retrieval
 ```
-Plot results:
+### Plot results:
 ```
 python -m evaluation.plot_results
 ```
-🌐 Run API Server
+### 🌐 Run API Server
 ```
 uvicorn app.main:app --reload
 ```
-API endpoint:
+### API endpoint:
 
 POST /query
-
 Example request:
 ```
 {
   "query": "What improves factual accuracy?"
 }
 ```
-🎯 Key Highlights
+### 🎯 Key Highlights
 
-Designed for scalable document ingestion (tested on 10K+ documents)
+- Designed for scalable document ingestion (tested on 10K+ documents)
 
-Modular retriever architecture
+- Modular retriever architecture
 
-Evaluation metrics included
+- Evaluation metrics included
 
-Hybrid search implementation
+- Hybrid search implementation
 
-Clean project structure for production scaling
+- Clean project structure for production scaling
 
-📌 Future Improvements
+### 📌 Future Improvements
 
-Cross-encoder re-ranking
+- Cross-Encoder Re-Ranking for improved top-1 precision
 
-Query expansion
+- Query Expansion Techniques for semantic coverage improvement
 
-LLM fine-tuning
+- LLM Fine-Tuning for domain-specific optimization
 
-Streamlit UI
+- Interactive UI (Streamlit / React Frontend)
 
-Docker deployment
+- Dockerized Deployment & Cloud Hosting
+### 📄 License
 
-📄 License
+This project is licensed under the **MIT License**.
 
-MIT License
