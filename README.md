@@ -161,7 +161,7 @@ python -m evaluation.evaluate_retrieval
 ```
 python -m evaluation.plot_results
 ```
-### 🌐 Run API Server
+###  Run API Server
 ```
 uvicorn app.main:app --reload
 ```
