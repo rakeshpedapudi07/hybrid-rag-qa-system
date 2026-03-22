@@ -4,7 +4,7 @@ A scalable NLP-driven Retrieval-Augmented Generation (RAG) system combining Dens
 
 ---
 
-## 🚀 Project Overview
+##  Project Overview
 
 This project implements a Hybrid Retrieval-Augmented Generation pipeline designed to improve factual accuracy and retrieval precision over large document corpora.
 
@@ -19,7 +19,7 @@ The system supports:
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 ```
 ┌────────────────────────────────────────────┐
 │                Client Request              │
@@ -64,7 +64,7 @@ The system supports:
 ```
 ---
 
-## 📊 Retrieval Performance (Precision@1)
+##  Retrieval Performance (Precision@1)
 ```
 | Method  | Precision@1 |
 |----------|-------------|
@@ -76,7 +76,7 @@ Hybrid retrieval improves reliability compared to standalone dense retrieval.
 
 ---
 ```
-## 📂 Project Structure
+##  Project Structure
 hybrid-rag-qa-system/
 │
 ├── app/                          # FastAPI application layer
@@ -115,7 +115,7 @@ hybrid-rag-qa-system/
 ```
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - Python 3.12
 - FastAPI
@@ -128,32 +128,32 @@ hybrid-rag-qa-system/
 
 ---
 
-## 🛠 Setup Instructions
+##  Setup Instructions
 
-### 1️⃣ Clone repository
+### 1️ Clone repository
 
 ```bash
 git clone https://github.com/rakeshpedapudi07/hybrid-rag-qa-system.git
 cd hybrid-rag-qa-system
 ```
-### 2️⃣ Create virtual environment
+### 2️ Create virtual environment
 ```
 python -m venv venv
 venv\Scripts\activate
 ```
-### 3️⃣ Install dependencies
+### 3️ Install dependencies
 ```
 pip install -r requirements.txt
 ```
-### 📥 Generate Corpus (Optional Large Scale Test)
+###  Generate Corpus (Optional Large Scale Test)
 ```
 python scripts/generate_corpus.py
 ```
-### 📌 Run Ingestion
+###  Run Ingestion
 ```
 python -m scripts.ingest
 ```
-### 📈 Evaluate Retrieval
+###  Evaluate Retrieval
 ```
 python -m evaluation.evaluate_retrieval
 ```
@@ -174,7 +174,7 @@ Example request:
   "query": "What improves factual accuracy?"
 }
 ```
-### 🎯 Key Highlights
+###  Key Highlights
 
 - Designed for scalable document ingestion (tested on 10K+ documents)
 - Modular retriever architecture
@@ -182,7 +182,7 @@ Example request:
 - Hybrid search implementation
 - Clean project structure for production scaling
 
-### 📌 Future Improvements
+###  Future Improvements
 
 - Cross-Encoder Re-Ranking for improved top-1 precision
 - Query Expansion Techniques for semantic coverage improvement
