@@ -5,7 +5,7 @@ A scalable Retrieval-Augmented Generation (RAG) system combining **Dense Retriev
 Designed for **high factual accuracy, retrieval precision, and production scalability**.
 
 ---
-
+ 
 ## Overview
 
 This project implements a hybrid RAG pipeline to improve answer accuracy over large document corpora.
@@ -13,7 +13,7 @@ This project implements a hybrid RAG pipeline to improve answer accuracy over la
 Unlike traditional RAG systems, this approach combines:
 - Semantic similarity (dense retrieval)
 - Lexical matching (BM25)
-- Hybrid score fusion for robust ranking
+- Hybrid score fusion for robust ranking     
 
 The system supports end-to-end flow:
 **Ingestion → Indexing → Retrieval → Generation → Evaluation**
