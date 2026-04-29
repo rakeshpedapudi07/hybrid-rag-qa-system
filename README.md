@@ -1,5 +1,5 @@
 # Hybrid RAG QA System
-
+ 
 A scalable Retrieval-Augmented Generation (RAG) system combining **Dense Retrieval (Sentence Transformers)** and **Sparse Retrieval (BM25)** with a hybrid ranking strategy, Pinecone vector database, and FastAPI inference API.
 
 Designed for **high factual accuracy, retrieval precision, and production scalability**.
