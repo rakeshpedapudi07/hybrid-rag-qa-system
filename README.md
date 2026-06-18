@@ -5,7 +5,7 @@ A scalable Retrieval-Augmented Generation (RAG) system combining **Dense Retriev
 Designed for **high factual accuracy, retrieval precision, and production scalability**.
 
 ---
- 
+   
 ## Overview
 
 This project implements a hybrid RAG pipeline to improve answer accuracy over large document corpora.  
