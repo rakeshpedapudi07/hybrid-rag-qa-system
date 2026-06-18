@@ -11,7 +11,7 @@ Designed for **high factual accuracy, retrieval precision, and production scalab
 This project implements a hybrid RAG pipeline to improve answer accuracy over large document corpora.  
   
 Unlike traditional RAG systems, this approach combines:
-- Semantic similarity (dense retrieval)
+- Semantic similarity (dense retrieval)  
 - Lexical matching (BM25)
 - Hybrid score fusion for robust ranking     
 
