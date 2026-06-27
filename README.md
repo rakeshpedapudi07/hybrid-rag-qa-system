@@ -4,7 +4,7 @@ A scalable Retrieval-Augmented Generation (RAG) system combining **Dense Retriev
 
 Designed for **high factual accuracy, retrieval precision, and production scalability**.     
 
----
+--- 
    
 ## Overview
 
@@ -33,7 +33,7 @@ The system supports end-to-end flow:
 
 ---
 
-## System Architecture
+## System Architecture   
 
 ```mermaid
 flowchart TD
