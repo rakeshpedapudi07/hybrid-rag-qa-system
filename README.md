@@ -60,7 +60,7 @@ sequenceDiagram
     participant API as FastAPI
     participant R as Retriever
     participant V as Vector DB
-    participant G as Generator
+    participant G as Generator  
 
     U->>API: Query Request
     API->>R: Process Query
